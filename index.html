@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>比特兔交易所</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <script src="js/anime.min.js"></script>
+  
+  
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <!--link rel="stylesheet" href="css/bootstrap.min.css"-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+  <link href="css/nucleo-icons.css" rel="stylesheet">
+  <!--link href="css/black-dashboard.mine209.css" rel="stylesheet"-->
+  <!--圖表-->
+		<!--script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+        <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+        <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+        <script src="https://img.hcharts.cn/highcharts/themes/dark-unica.js"></script-->
+        <!--script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+		
+		
+		
+  
+  <link href="css/all.css" rel="stylesheet">
+  <link href="css/b.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+  <header>
+    <div>
+	
+      <div class="logo-container">
+        <img src="img/oasis-logo.png" alt="BitRabbit">
+      </div>
+      <div class="header-menu">
+        <ol>      
+          <li id="slBtns">登入</li>
+          <li id="slBtns">註冊</li>
+		  <li id="localChange">
+            <a>Language</a>
+            <div class="menu">
+              <a href="zh-cn.html">简体中文</a>
+              <a href="zh-tw.html">繁體中文</a>
+              <a href="en.html">English</a>
+            </div>
+		</li>
+		  
+		  
+		  
+        </ol>
+      </div>
+    </div>
+  </header>
+  <!--背景暫時深色 STYLE-->
+  <div id="banner">
+    <div class="content">
+   <div class="row">
+      <div class="welcome col-md-7">
+        <div class="t1">領先全球交易平台</div>
+        <div class="opt">
+          <button class="ghost">登入</button>
+          <a  href="#">
+            <button class="ghost">註冊</button>
+          </a>
+        </div>
+      </div>
+	  <!--高度填充-->
+	  <div class="visible-lg-1" style="width:400px;height: 400px;"></div>
+	  </div>
+    </div>
+    <div class="banner-b">
+      <svg width="30px" height="30px" viewBox="0 0 30 30" class="triangle" preserveAspectRatio="none">
+        <polygon points="30,0 30,30 0,30" />
+      </svg>
+      <style>
+	  .block img{-webkit-filter:brightness(.8);}
+	  .block img:hover{ -webkit-filter:brightness(2);}
+	  
+
+
+      </style>
+	  
+	  <!--div class=" blocks">
+	  <div class="block" ><img  src="img/banner1.jpg"></div>
+	  <div class="block" ><img  src="img/banner2.jpg"></div>
+	  <div class="block" ><img  src="img/banner3.jpg"></div>
+	  <div class="block" ><img  src="img/banner4.jpg"></div>
+	</div> 
+      <div class="blocks-m">
+	   <div class="block" ><img  src="img/banner1.jpg"></div>
+	  <div class="block" ><img  src="img/banner2.jpg"></div>
+	  <div class="block" ><img  src="img/banner3.jpg"></div>
+	  <div class="block" ><img  src="img/banner4.jpg"></div>
+	  </div-->
+	  
+    </div>
+  </div>
+  
+  <style>
+
+  
+  
+  </style>
+  
+  
+  <div class="content">   
+  <div class="container">
+  
+  <div class="b_mm">
+	  <div class="row">
+        <div class="col-md-3 col-6"> <img class="img-fluid d-block" src="img/banner1.jpg"> </div>
+        <div class="col-md-3 col-6"> <img class="img-fluid d-block" src="img/banner2.jpg"> </div>
+        <div class="col-md-3 col-6"> <img class="img-fluid d-block" src="img/banner3.jpg"> </div>
+        <div class="col-md-3 col-6"> <img class="img-fluid d-block" src="img/banner4.jpg"> </div>
+      </div>
+      </div>
+	  <div class="b_mss">
+	  <div class="row">
+	     
+        <div class="col-md-3 col-6"> <img class="img-fluid d-block" src="img/banner1.jpg"> </div>
+        <div class="col-md-3 col-6"> <img class="img-fluid d-block" src="img/banner2.jpg"> </div>
+        <div class="col-md-3 col-6"> <img class="img-fluid d-block" src="img/banner3.jpg"> </div>
+        <div class="col-md-3 col-6"> <img class="img-fluid d-block" src="img/banner4.jpg"> </div>
+	  </div>
+	  
+    </div> 
+	  </div>
+      </div>
+	  
+	<div id="indexes" class="indexes">
+    <div class="index panel active" type="bai">
+      <div class="index-content">
+        <div class="value visible-lg-1">
+          <div class="current">
+            <div class="v-title">当前价格 <span class="v-value red-text">0.7820000000000001</span></div>
+          </div>
+          <div class="change">
+            <div class="v-title">历史涨跌 <span class="v-value red-text">-31.40%</span></div>
+          </div>
+        </div>
+		<div >
+      <canvas id="SAAAA"   ></canvas>
+      </div>
+      </div>
+    </div>
+  </div>
+	  
+	  <div id="markets"><div class="market">
+	  <div class="content">
+	  <div class="row">
+	 <div class="col-sm-3"></div>
+	 <div class="col-sm-3"></div>
+	 <div class="col-sm-3"></div>
+	 <div class="col-sm-3"> <form class="">
+      <input class=" mr-sm-0" type="search" placeholder="Search" aria-label="Search">
+      <button class="my-sm-1 my-1" type="submit">Search</button>
+    </form></div>
+	 
+	</div>
+	</div>
+	
+	<!--div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div-->
+  
+  
+
+
+
+    <div class="market-tabs-wrap">
+      <div class="market-tabs"  >
+	  
+	  <div data-tab="BTC" class="market-panel-title active">BTC市场</div>
+	  <div data-tab="CARROT" class="market-panel-title ">CARROT市场</div>
+	  <div data-tab="ETH" class="market-panel-title ">ETH市场</div>
+	  <div data-tab="USDT" class="market-panel-title ">USDT市场</div>
+	  
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+	  </div>
+	  
+	 
+
+
+	  
+
+  
+	  
+	  
+    </div>
+    <div class="currency">
+      <div class="favorite"></div>
+      <div class="name" data-sort="name">市场</div>
+      <div class="price">最新价</div>
+      <div class="change text-right" data-sort="change">24h涨跌</div>
+      <div class="high text-right">24h最高价</div>
+      <div class="low text-right">24h最低价</div>
+      <div class="volume text-right">24h成交量</div>
+      <div class="turnover text-right" data-sort="turnover">24h成交额</div>
+    </div>
+    <div class="content"><div id="market_4" class="currency" data-market-id="4" data-market-name="ETH/BTC">
+        <div class="favorite"><a class="favorite-button-4"><i class="mark"></i></a></div>
+        <div class="name">ETH/BTC<div class="tag-wrapper"></div></div>
+        <div class="price red-text"><div><tt>0.028976</tt><tt class="legal-price">￥880.119</tt></div></div>
+        <div class="change text-right red-text"><tt>-2.03%</tt></div>
+        <div class="high text-right"><tt>0.02959100</tt></div>
+        <div class="low text-right"><tt>0.02824300</tt></div>
+        <div class="volume text-right"><tt>15451</tt></div>
+        <div class="turnover text-right"><tt>449.56</tt></div>
+      </div><div id="market_11" class="currency" data-market-id="11" data-market-name="BCH/BTC">
+        <div class="favorite"><a class="favorite-button-11"><i class="mark"></i></a></div>
+        <div class="name">BCH/BTC<div class="tag-wrapper"></div></div>
+        <div class="price red-text"><div><tt>0.046374</tt><tt class="legal-price">￥1408.566</tt></div></div>
+        <div class="change text-right red-text"><tt>-7.47%</tt></div>
+        <div class="high text-right"><tt>0.05017300</tt></div>
+        <div class="low text-right"><tt>0.04616000</tt></div>
+        <div class="volume text-right"><tt>927</tt></div>
+        <div class="turnover text-right"><tt>44.68</tt></div>
+      </div><div id="market_12" class="currency" data-market-id="12" data-market-name="DASH/BTC">
+        <div class="favorite"><a class="favorite-button-12"><i class="mark"></i></a></div>
+        <div class="name">DASH/BTC<div class="tag-wrapper"></div></div>
+        <div class="price red-text"><div><tt>0.023632</tt><tt class="legal-price">￥717.800</tt></div></div>
+        <div class="change text-right red-text"><tt>-3.54%</tt></div>
+        <div class="high text-right"><tt>0.02451500</tt></div>
+        <div class="low text-right"><tt>0.02310100</tt></div>
+        <div class="volume text-right"><tt>1030</tt></div>
+        <div class="turnover text-right"><tt>24.64</tt></div>
+      </div><div id="market_14" class="currency" data-market-id="14" data-market-name="ETC/BTC">
+        <div class="favorite"><a class="favorite-button-14"><i class="mark"></i></a></div>
+        <div class="name">ETC/BTC<div class="tag-wrapper"></div></div>
+        <div class="price red-text"><div><tt>0.001213</tt><tt class="legal-price">￥36.844</tt></div></div>
+        <div class="change text-right red-text"><tt>-3.35%</tt></div>
+        <div class="high text-right"><tt>0.00126300</tt></div>
+        <div class="low text-right"><tt>0.00120900</tt></div>
+        <div class="volume text-right"><tt>21617</tt></div>
+        <div class="turnover text-right"><tt>26.70</tt></div>
+      </div><div id="market_16" class="currency" data-market-id="16" data-market-name="LTC/BTC">
+        <div class="favorite"><a class="favorite-button-16"><i class="mark"></i></a></div>
+        <div class="name">LTC/BTC<div class="tag-wrapper"></div></div>
+        <div class="price green-text"><div><tt>0.008606</tt><tt class="legal-price">￥261.399</tt></div></div>
+        <div class="change text-right green-text"><tt>+0.00%</tt></div>
+        <div class="high text-right"><tt>0.00860600</tt></div>
+        <div class="low text-right"><tt>0.00860600</tt></div>
+        <div class="volume text-right"><tt>0</tt></div>
+        <div class="turnover text-right"><tt>0.00</tt></div>
+      </div><div id="market_20" class="currency" data-market-id="20" data-market-name="XLM/BTC">
+        <div class="favorite"><a class="favorite-button-20"><i class="mark"></i></a></div>
+        <div class="name">XLM/BTC<div class="tag-wrapper"></div></div>
+        <div class="price red-text"><div><tt>0.0000424</tt><tt class="legal-price">￥1.288</tt></div></div>
+        <div class="change text-right red-text"><tt>-2.77%</tt></div>
+        <div class="high text-right"><tt>0.00004365</tt></div>
+        <div class="low text-right"><tt>0.00004149</tt></div>
+        <div class="volume text-right"><tt>2522556</tt></div>
+        <div class="turnover text-right"><tt>107.93</tt></div>
+      </div><div id="market_23" class="currency" data-market-id="23" data-market-name="ZEC/BTC">
+        <div class="favorite"><a class="favorite-button-23"><i class="mark"></i></a></div>
+        <div class="name">ZEC/BTC<div class="tag-wrapper"></div></div>
+        <div class="price red-text"><div><tt>0.017733</tt><tt class="legal-price">￥538.623</tt></div></div>
+        <div class="change text-right red-text"><tt>-3.88%</tt></div>
+        <div class="high text-right"><tt>0.01864500</tt></div>
+        <div class="low text-right"><tt>0.01758400</tt></div>
+        <div class="volume text-right"><tt>4630</tt></div>
+        <div class="turnover text-right"><tt>83.81</tt></div>
+      </div><div id="market_42" class="currency" data-market-id="42" data-market-name="SKY/BTC">
+        <div class="favorite"><a class="favorite-button-42"><i class="mark"></i></a></div>
+        <div class="name">SKY/BTC<div class="tag-wrapper"></div></div>
+        <div class="price red-text"><div><tt>0.000328</tt><tt class="legal-price">￥9.963</tt></div></div>
+        <div class="change text-right red-text"><tt>-4.37%</tt></div>
+        <div class="high text-right"><tt>0.00034600</tt></div>
+        <div class="low text-right"><tt>0.00032100</tt></div>
+        <div class="volume text-right"><tt>1</tt></div>
+        <div class="turnover text-right"><tt>0.00</tt></div>
+      </div><div id="market_51" class="currency" data-market-id="51" data-market-name="TRVC/BTC">
+        <div class="favorite"><a class="favorite-button-51"><i class="mark"></i></a></div>
+        <div class="name">TRVC/BTC<div class="tag-wrapper"></div></div>
+        <div class="price green-text"><div><tt>0.00000407</tt><tt class="legal-price">￥0.124</tt></div></div>
+        <div class="change text-right green-text"><tt>+0.25%</tt></div>
+        <div class="high text-right"><tt>0.00000589</tt></div>
+        <div class="low text-right"><tt>0.00000406</tt></div>
+        <div class="volume text-right"><tt>5175</tt></div>
+        <div class="turnover text-right"><tt>0.02</tt></div>
+      </div><div id="market_55" class="currency" data-market-id="55" data-market-name="PAI/BTC">
+        <div class="favorite"><a class="favorite-button-55"><i class="mark"></i></a></div>
+        <div class="name">PAI/BTC<div class="tag-wrapper"></div></div>
+        <div class="price red-text"><div><tt>0.00001632</tt><tt class="legal-price">￥0.496</tt></div></div>
+        <div class="change text-right red-text"><tt>-5.06%</tt></div>
+        <div class="high text-right"><tt>0.00001736</tt></div>
+        <div class="low text-right"><tt>0.00001603</tt></div>
+        <div class="volume text-right"><tt>110578</tt></div>
+        <div class="turnover text-right"><tt>1.85</tt></div>
+      </div><div id="market_60" class="currency" data-market-id="60" data-market-name="BTC2/BTC">
+        <div class="favorite"><a class="favorite-button-60"><i class="mark"></i></a></div>
+        <div class="name">BTC2/BTC<div class="tag-wrapper"></div></div>
+        <div class="price green-text"><div><tt>0.11231421</tt><tt class="legal-price">￥3411.438</tt></div></div>
+        <div class="change text-right green-text"><tt>+8.88%</tt></div>
+        <div class="high text-right"><tt>0.11111111</tt></div>
+        <div class="low text-right"><tt>0.10254981</tt></div>
+        <div class="volume text-right"><tt>2</tt></div>
+        <div class="turnover text-right"><tt>0.13</tt></div>
+      </div></div>
+  </div></div>
+	 
+	 
+	 
+	 
+  
+  
+	  </div>
+	  
+	  
+  
+
+  <div id="markets"></div>
+  <footer>
+    <div class="link-title"><strong class="text">友情链接</strong></div>
+    <ul id="links">
+      <li><a target="_blank" href="https://www.feixiaohao.com/exchange/bitrabbit/">非小号</a></li>
+      <li><a target="_blank" href="http://www.tokenpapa.com/">币头条</a></li>
+      <li><a target="_blank" href="http://tuibit.com/">推比特</a></li>
+      <li><a target="_blank" href="http://www.chain.vip//">Vipchain</a></li>
+      <li><a target="_blank" href="http://www.btc798.com/">比特之家</a></li>
+      <li><a target="_blank" href="http://dapdap.io/">DapDap</a></li>
+      <li><a target="_blank" href="http://www.world-cup.io/">加密世界杯</a></li>
+      <li><a target="_blank" href="http://www.btc789.com/">比特之窗</a></li>
+      <li><a target="_blank" href="https://www.coinbull.one/">币牛牛</a></li>
+      <li><a target="_blank" href="http://www.qukuaiwang.com.cn/">区块网</a></li>
+      <li><a target="_blank" href="http://www.bityixia.com/">比特一下</a></li>
+      <li><a target="_blank" href="https://www.bitask.org/">币问</a></li>
+      <li><a target="_blank" href="http://hb.io/">HB.io</a></li>
+      <li><a target="_blank" href="http://www.xhcjtv.com/">嘻哈财经</a></li>
+      <li><a target="_blank" href="http://www.178bit.com/">口袋比特</a></li>
+      <li><a target="_blank" href="http://www.120btc.com/">币圈子</a></li>
+      <li><a target="_blank" href="http://bitjia.com/">比特家</a></li>
+      <li><a target="_blank" href="http://72chains.com/">火链财经</a></li>
+      <li><a target="_blank" href="http://tdapk.com/">糖果空投网</a></li>
+      <li><a target="_blank" href="http://bitun.io/">比联</a></li>
+      <li><a target="_blank" href="https://niuyan.com/">牛眼行情</a></li>
+      <li><a target="_blank" href="http://xnqb.com/">小牛情报</a></li>
+      <li><a target="_blank" href="http://bitool.cn/">币兔网</a></li>
+      <li><a target="_blank" href="https://dappso.cn/">DappSo</a></li>
+      <li><a target="_blank" href="https://hyperpay.tech/">超级支付</a></li>
+      <li><a target="_blank" href="http://www.tanuonline.com/">探牛社区</a></li>
+      <li><a target="_blank" href="http://www.blockfo.com/">Blockfo</a></li>
+      <li><a target="_blank" href="http://www.chainhr.com/">链人</a></li>
+      <li><a target="_blank" href="https://www.bituniverse.org/">币优</a></li>
+      <li><a target="_blank" href="https://bysec.io/">拜思</a></li>
+    </ul>
+    <div id="docs">
+      <div class="doc">
+        <div class="title">团队</div>
+        <ul class="links">
+          <li><a target="_blank" href="https://support.bitrabbit.com/hc/zh-cn/articles/360000694552">关于我们</a></li>
+          <li><a target="_blank" href="https://support.bitrabbit.com/hc/zh-cn/articles/360000714371">联系我们</a></li>
+          <li><a target="_blank" href="https://bitrabbit.zendesk.com/hc/zh-cn/articles/360000695092">诚聘英才</a></li>
+        </ul>
+      </div>
+      <div class="doc">
+        <div class="title">法律</div>
+        <ul class="links">
+          <li><a target="_blank" href="https://support.bitrabbit.com/hc/zh-cn/articles/360000695652">服务协议</a></li>
+          <li><a target="_blank" href="https://support.bitrabbit.com/hc/zh-cn/articles/360000696032">隐私政策</a></li>
+        </ul>
+      </div>
+      <div class="doc">
+        <div class="title">服务</div>
+        <ul class="links">
+          <li><a target="_blank" href="https://support.bitrabbit.com/hc/zh-cn/articles/360000635111">费率说明</a></li>
+          <li><a target="_blank" href="https://support.bitrabbit.com/hc/zh-cn/articles/360000714071">上币申请</a></li>
+        </ul>
+      </div>
+      <div class="doc big">
+        <div class="title">公告中心</div>
+        <ul class="links">
+          <li><a target="_blank" href="https://support.bitrabbit.com/hc/zh-cn/requests/new">提交工单</a></li>
+          <li><a target="_blank" href="https://support.bitrabbit.com/hc/zh-cn/articles/360009271011-BitRabbit">反洗钱公告</a></li>
+        </ul>
+      </div>
+      <div class="doc divide">
+        <div class="title">关注我们</div>
+        <ul class="links">
+          <li><a target="_blank" href="https://github.com/brickbitindex/">Github</a></li>
+          <li><a target="_blank" href="https://www.facebook.com/BitRabbitTeam/">Facebook</a></li>
+          <li><a target="_blank" href="https://twitter.com/Bitrabbit_Team">Twitter</a></li>
+          <li><a target="_blank" href="https://t.me/bitrabbit_zh">Telegram中文用户群</a></li>
+          <li><a target="_blank" href="https://t.me/bitrabbit_en">Telegram英文用户群</a></li>
+          <li><a target="_blank" href="https://t.me/bitrabbit_official">Telegram通告群</a></li>
+          <li><a target="_blank" href="https://www.reddit.com/user/BitRabbit_Team/">Reddit</a></li>
+        </ul>
+      </div>
+      <div class="doc small">
+        <div class="title">关注微信</div>
+        <div class="wechat">
+          <img src="../assets.bitrabbit.com/static/bbc1e3ac4c44e604e34e2777cc6b9dc9.jpg" alt="">
+        </div>
+        <div class="title">商务合作：biz@bitrabbit.com</div>
+      </div>
+    </div>
+    <div class="right">© 2018, BitRabbit Technology Pty Ltd, Registered in Australia</div>
+  </footer>
+
+  <div class="modal email" id="signin">
+    <div class="modal-content">
+      <span class="iconfont icon-close modal-close"></span>
+      <div class="title"><img src="https://assets.bitrabbit.com/static/9860a703fefeb004805868c4b731ec50.svg" alt="BitRabbit"></div>
+      <div class="row choose">
+        <button class="active" data-type="email">使用邮箱登录</button><button data-type="phone">使用手机号登录</button>
+      </div>
+      <div class="row type-row" data-type="email">
+        <input type="text" id="signinEmail" placeholder="邮箱" enter="#signinPassword">
+      </div>
+      <div class="row type-row" data-type="phone">
+        <select id="signinArea" class="cur-select">
+        </select>
+      </div>
+      <div class="row type-row phone-with-prefix" data-type="phone">
+        <!--<input type="text" id="areaCode" class="w20 float-left" placeholder="86" enter="#signupPhone">-->
+        <span id="signinPhonePrefix" class="prefix"></span>
+        <input type="text" id="signinPhone" class="w55 float-right" placeholder="手机" enter="#signinPassword">
+      </div>
+      <div class="row">
+        <input type="password" id="signinPassword" placeholder="密码" enter="#signinRucaptcha">
+      </div>
+      <div class="row">
+        <input type="text" id="signinRucaptcha" placeholder="验证码" enter="#signinSubmit" autocomplete="off">
+      </div>
+      <div class="row rucaptcha-row">
+        <img class="rucaptcha-img" alt="">
+      </div>
+      <div class="row text-right">
+        <a class="goto-forgetPassword">忘记密码</a>
+      </div>
+      <div class="row">
+        <button id="signinSubmit">登 录</button>
+      </div>
+      <div class="row text-right">
+        <a class="goto-signup">注册账号</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="signup">
+    <div class="modal-content">
+      <span class="iconfont icon-close modal-close"></span>
+      <div class="title"><img src="https://assets.bitrabbit.com/static/9860a703fefeb004805868c4b731ec50.svg" alt="BitRabbit"></div>
+      <div class="row email-row hidden">
+        <input type="text" id="signupEmail" placeholder="邮箱" enter="#signupPassword">
+      </div>
+      <div class="row phone-row">
+        <select id="signupArea" class="cur-select">
+        </select>
+      </div>
+      <div class="row phone-row phone-with-prefix">
+        <!--<input type="text" id="areaCode" class="w20 float-left" placeholder="86" enter="#signupPhone">-->
+        <span id="signupPhonePrefix" class="prefix"></span>
+        <input type="text" id="signupPhone" class="w55 float-right" placeholder="手机" enter="#signupPhoneRucaptcha">
+      </div>
+      <div class="row phone-row">
+        <input type="text" id="signupPhoneRucaptcha" placeholder="手机验证码" class="float-left w45" enter="#signupPassword">
+        <button id="signupGetRucaptcha" class="float-right w45" >获取验证码</button>
+        <button id="signupGetRucaptchaAgain" class="disabled hidden float-right w45">重发验证码（<span class="residual-time">60</span>）</button>
+      </div>
+      <div class="row">
+        <input type="password" id="signupPassword" placeholder="密码" enter="#signupPassword2">
+      </div>
+      <div class="row">
+        <input type="password" id="signupPassword2" placeholder="确认密码" enter="#signupRucaptcha">
+      </div>
+      <div class="row">
+        <input type="text" id="signupRucaptcha" placeholder="验证码" enter="#signupSubmit" autocomplete="off">
+      </div>
+      <div class="row rucaptcha-row">
+        <img class="rucaptcha-img" alt="">
+      </div>
+      <div class="row">
+        <input type="checkbox" name="hasCode" id="hasCode">
+        <label for="hasCode">我有推荐码</label>
+      </div>
+      <div class="row hidden" id="signupCodeRow">
+        <input type="text" id="signupCode" placeholder="推荐码" enter="#signupSubmit">
+      </div>
+      <div class="row">
+        <input type="checkbox" name="allowSignup" id="allowSignup">
+        <label for="allowSignup">您同意<a target="_blank" href="https://support.bitrabbit.com/hc/zh-cn/articles/360000695652">服务协议</a>和<a target="_blank" href="https://support.bitrabbit.com/hc/zh-cn/articles/360000696032">隐私政策</a></label>
+      </div>
+      <div class="row">
+        <input type="checkbox" name="countryLimit" id="countryLimit">
+        <label for="countryLimit">我不是美国公民或者美国纳税人</label>
+      </div>
+      <div class="row">
+        <button id="signupSubmit">注 册</button>
+      </div>
+      <div class="row">
+        <a class="hidden float-left" id="signupByPhone">使用手机号注册</a>
+        <a class="float-left" id="signupByEmail">使用邮箱注册</a>
+        <a class="goto-signin float-right">使用已有账号登录</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal email" id="forgetPassword">
+    <div class="modal-content">
+      <span class="iconfont icon-close modal-close"></span>
+      <div class="title"><img src="https://assets.bitrabbit.com/static/9860a703fefeb004805868c4b731ec50.svg" alt="BitRabbit"></div>
+      <div class="row choose">
+        <button class="active" data-type="email">邮箱重置密码</button><button data-type="phone">手机重置密码</button>
+      </div>
+      <div class="row type-row" data-type="email">
+        <input type="text" id="forgetPasswordEmail" placeholder="请输入注册时填写的邮箱" enter="#forgetPasswordRucaptcha">
+      </div>
+      <div class="row type-row" data-type="email">
+        <input type="text" id="forgetPasswordRucaptcha" placeholder="验证码" enter="#forgetPasswordSubmit" autocomplete="off">
+      </div>
+      <div class="row type-row rucaptcha-row" data-type="email">
+        <img class="rucaptcha-img" alt="">
+      </div>
+      <div class="success-msg">
+        <span>已发送重置邮件，若长时间没有收到，请在垃圾邮件或广告邮件中寻找</span>
+      </div>
+      <div class="row type-row" data-type="email">
+        <button id="forgetPasswordSubmit">发送重置密码邮件</button>
+      </div>
+      <div class="row type-row" data-type="phone">
+        <select id="forgetPasswordArea" class="cur-select">
+        </select>
+      </div>
+      <div class="row type-row phone-with-prefix" data-type="phone">
+        <span id="forgetPasswordPhonePrefix" class="prefix"></span>
+        <input type="text" id="forgetPasswordPhone" class="w55 float-right" placeholder="请输入注册时的手机号码" enter="#forgetPhoneRucaptcha">
+      </div>
+      <div class="row type-row" data-type="phone">
+        <input type="text" id="forgetPhoneRucaptcha" placeholder="手机验证码" class="float-left w45" enter="#forgetPasswordPhonePass">
+        <button id="forgetGetRucaptcha" class="float-right w45" >获取验证码</button>
+        <button id="forgetGetRucaptchaAgain" class="disabled hidden float-right w45">重发验证码（<span class="residual-time">60</span>）</button>
+      </div>
+      <div class="row type-row" data-type="phone">
+        <input type="password" id="forgetPasswordPhonePass" placeholder="新密码" enter="#forgetPasswordPhonePassAgain" autocomplete="off">
+      </div>
+      <div class="row type-row" data-type="phone">
+        <input type="password" id="forgetPasswordPhoneAgain" placeholder="确认密码" enter="#forgetPasswordPhoneRucaptcha" autocomplete="off">
+      </div>
+      <div class="row type-row" data-type="phone">
+        <input type="text" id="forgetPasswordPhoneRucaptcha" placeholder="验证码" enter="#forgetPasswordPhoneSubmit" autocomplete="off">
+      </div>
+      <div class="row type-row rucaptcha-row" data-type="phone">
+        <img class="rucaptcha-img" alt="">
+      </div>
+      <div class="row type-row" data-type="phone">
+        <button id="forgetPasswordPhoneSubmit">重置登录密码</button>
+      </div>
+      <div class="row text-right">
+        <a class="goto-signin">使用已有账号登录</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="resetPassword">
+    <div class="modal-content">
+      <span class="iconfont icon-close modal-close"></span>
+      <div class="title"><img src="https://assets.bitrabbit.com/static/9860a703fefeb004805868c4b731ec50.svg" alt="BitRabbit"></div>
+      <div class="row">
+        <input type="password" id="resetPasswordNewPassword" placeholder="新密码" enter="#resetPasswordNewPassword2">
+      </div>
+      <div class="row">
+        <input type="password" id="resetPasswordNewPassword2" placeholder="确认密码" enter="#resetPasswordSubmit">
+      </div>
+      <div class="row">
+        <button id="resetPasswordSubmit">重置登录密码</button>
+      </div>
+      <div class="row text-right">
+        <a class="goto-signin">登 录</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="qrcode link-wrap" >
+    <img src="../assets.bitrabbit.com/static/6d33eac373512ade6b10f5c9ea976f2c.png" alt="qrcode" />
+    <div class="qq-text">比特兔官方交流群</div>
+    <div>QQ群：712845415</div>
+  </div>
+  <div class="qq link-wrap">
+    <a class="qq-icon"><img src="https://assets.bitrabbit.com/static/4147a6ece0438e71ffa7e3f640a70aa9.svg" alt="qq" /></a>
+  </div>
+  <div class="tg link-wrap">
+    <a href="https://t.me/bitrabbit_en" target="_blank"><img src="https://assets.bitrabbit.com/static/d41d65e792e02c7f061f7fb19970974e.svg" alt="telegram" /></a>
+  </div>
+<!--script type="text/javascript" src="js/all.js"></script-->
+
+  <script src="js/jquery.min.js"></script>
+  <!-- Chart JS -->
+  <!--script src="js/chartjs.min.js"></script-->
+  <!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  <!--script src="js/demo.js"></script-->  
+
+
+  <!--script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+      demo.initVectorMap();
+
+    });
+	
+
+	
+	
+  </script-->
+  
+  <!--script type="text/javascript" src="https://assets.bitrabbit.com/static/home/30f49d6b.js"></script-->
+  
+  <!--圖表-->
+<script>
+//預設表格資料
+var lineChartData = {
+    labels: ["3", "6", "9", "12", "15", "18", "21", "24", "27"], //顯示區間名稱
+    datasets: [{
+        label: '未曾使用', // tootip 出現的名稱
+        lineTension: 0, // 曲線的彎度，設0 表示直線
+        backgroundColor: "#ea464d",
+        borderColor: "#ea464d",
+        borderWidth: 5,
+        data: [10, 12, 15, 18, 22, 33, 50, 60, 130], // 資料
+        fill: false, // 是否填滿色彩
+    }, {
+        label: '罹癌後開始使用',
+        lineTension: 0,
+        fill: false,
+        backgroundColor: "#29b288",
+        borderColor: "#29b288",
+        borderWidth: 5,
+        data: [12, 14, 18, 20, 21, 34, 60, 80, 200],
+    },]
+};
+
+//開始畫圖
+
+function drawLineCanvas(ctx,data) {
+    window.myLine = new Chart(ctx, {  //先建立一個 chart
+        type: 'line', // 型態
+        data: data,
+        options: {
+                responsive: true,
+                legend: { //是否要顯示圖示
+                    display: true,
+                },
+                tooltips: { //是否要顯示 tooltip
+                    enabled: true
+                },
+                scales: {  //是否要顯示 x、y 軸
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        display: true
+                    }]
+                },
+            }
+    });
+};
+
+window.onload = function () {
+    var ctx = document.getElementById("SAAAA").getContext("2d");
+    drawLineCanvas(ctx,lineChartData);
+};
+</script>
+  
+</body>
+</html>
